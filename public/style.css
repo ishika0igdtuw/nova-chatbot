@@ -1,0 +1,141 @@
+body {
+      background-color: #0f0f0f;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: auto;
+      padding-top: 40px;
+    }
+
+    #chatWindow {
+      height: 400px;
+      overflow-y: auto;
+      background-color: #1e1e1e;
+      border-radius: 15px;
+      padding: 20px;
+      box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.05);
+    }
+
+    .chat-bubble {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 15px;
+      padding: 10px 15px;
+      border-radius: 15px;
+      max-width: 85%;
+    }
+
+    .chat-user {
+      background: #4d4d4d;
+      color: #fff;
+      align-self: flex-end;
+      margin-left: auto;
+      border-right: 4px solid #ff6b6b;
+    }
+
+    .chat-bot {
+     background: linear-gradient(135deg, rgba(45,47,58,0.6), rgba(70,70,90,0.2));
+     backdrop-filter: blur(10px);
+     border: 1px solid rgba(0,255,255,0.3);
+     color: #e0f7fa;
+     box-shadow: 0 0 10px rgba(0,255,255,0.2);
+   }
+
+
+    .avatar {
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+
+    .typing-indicator {
+      font-size: 0.9em;
+      color: #888;
+      margin-top: 5px;
+      padding-left: 5px;
+    }
+
+    #userInput {
+      border-radius: 30px 0 0 30px;
+      padding: 12px 15px;
+      border: none;
+      width: 80%;
+      outline: none;
+    }
+
+    #sendButton {
+      border-radius: 0 30px 30px 0;
+      background: #2196f3;
+      border: none;
+      color: white;
+      padding: 12px 20px;
+    }
+
+    #recordButton {
+      margin-top: 15px;
+      background: linear-gradient(135deg, #00c6ff, #0072ff);
+      color: white;
+      padding: 14px;
+      width: 100%;
+      border: none;
+      border-radius: 30px;
+      font-size: 16px;
+    }
+
+    .response-box {
+  background-color: #242424;
+  border: 1px solid #00adb5;
+  border-radius: 10px;
+  padding: 12px 15px;
+  margin-top: 8px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  white-space: pre-line;
+  box-shadow: 0 0 10px rgba(0, 173, 181, 0.2);
+}
+
+.response-box strong {
+  color: #00ffc3;
+}
+
+.timestamp {
+  font-size: 0.75em;
+  color: #aaa;
+  margin-top: 5px;
+}
+
+.chip {
+  background: #1e88e5;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 8px 16px;
+  margin: 5px 5px 0 0;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.chip:hover {
+  background: #1565c0;
+}
+
+
+.bubble-clear-btn {
+  background-color: #102f60;
+  color: white;
+  border: none;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.2);
+  transition: background-color 0.2s ease;
+}
+
+.bubble-clear-btn:hover {
+  background-color: #c0392b;
+}
