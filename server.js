@@ -25,7 +25,7 @@ app.post('/api/gemini', async (req, res) => {
     const text = response?.data?.candidates?.[0]?.content?.parts?.[0]?.text;
     res.json({ reply: text });
   } catch (err) {
-        console.error("Gemini error:", err.response?.data || err.message);
+    console.error("Gemini error:", err.response?.data || err.message);
     res.status(500).json({ error: "Error calling Gemini API" });
   }
 });
