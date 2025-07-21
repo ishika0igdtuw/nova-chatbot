@@ -1,4 +1,5 @@
 // ✅ API Keys (DO NOT EXPOSE in production)
+let conversationHistory = []; // stores full chat
 
 const recordButton = document.getElementById('recordButton');
 const chatWindow = document.getElementById('chatWindow');
@@ -201,22 +202,30 @@ async function speakText(text) {
 }
 
 // 🤖 Gemini API call
-async function getGeminiResponse(inputText) {
+async function getGeminiResponse(userMessage) {
+  conversationHistory.push({ role: "user", content: userMessage });
+
+  const historyText = conversationHistory.map(msg =>
+    `${msg.role === "user" ? "User" : "Bot"}: ${msg.content}`
+  ).join("\n") + "\nBot:";
+
   try {
     const res = await fetch('/api/gemini', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ userMessage: inputText })
+      body: JSON.stringify({ userMessage: historyText })
     });
 
     const data = await res.json();
-    return data.reply || "No response from Gemini.";
+    const botReply = data.reply || "No response from Gemini.";
+
+    conversationHistory.push({ role: "bot", content: botReply });
+    return botReply;
   } catch (e) {
     console.error("Gemini fetch failed:", e);
     return "Gemini API failed.";
   }
 }
-
 function resetProfile() {
   userProfile = { education: '', interests: '', skills: '', location: '' };
   step = 0;
