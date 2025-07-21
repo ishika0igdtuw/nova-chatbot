@@ -41,12 +41,38 @@
 ## 🚀 Getting Started
 
 ### 1. Clone the Repository
+git clone https://github.com/ishika0igdtuw/nova-chatbot.git
+cd nova-chatbot
 
-```bash
-git clone https://github.com/YOUR_USERNAME/skillbot-nova.git
-cd skillbot-nova
-Install Dependencies
-bash
-Copy
-Ed
+### 2.Install Backend Dependencies
 npm install
+
+### 3.Add API Keys
+GEMINI_API_KEY=your-gemini-api-key-here
+OPENAI_API_KEY=your-openai-api-key-here
+
+### 4.Start the Server
+node server.js
+
+###🧪 How To Use 
+Open public/index.html in your browser.
+Start chatting like you would with a real assistant.
+Use the mic button for voice input.
+Enjoy real-time responses and dynamic suggestions!
+
+###📁 Project Structure
+nova-chatbot/
+├── public/
+│   ├── index.html
+│   ├── script.js
+│   ├── style.css
+│   └── assets (images, etc.)
+├── server.js
+├── .env
+├── .gitignore
+├── package.json
+
+###📷 Preview
+<img width="1887" height="851" alt="image" src="https://github.com/user-attachments/assets/1625b77a-e3ee-405e-a4a3-e57dd6b06111" />
+<img width="1875" height="799" alt="image" src="https://github.com/user-attachments/assets/98ee5a4a-f4ba-44df-abaf-e093af63afd9" />
+
