@@ -74,5 +74,9 @@ nova-chatbot/
 
 ###📷 Preview
 <img width="1887" height="851" alt="image" src="https://github.com/user-attachments/assets/1625b77a-e3ee-405e-a4a3-e57dd6b06111" />
+
+
+
+
 <img width="1875" height="799" alt="image" src="https://github.com/user-attachments/assets/98ee5a4a-f4ba-44df-abaf-e093af63afd9" />
 
